@@ -1,0 +1,17 @@
+<body>    
+    
+    <form style="margin: auto; width: 220px;" (ngSubmit)="login()">  
+        <h3> Login Form </h3>   
+        <div class="container">   
+            <label>Username : </label>   
+            <input type="text" placeholder="Enter Username" name="username" [(ngModel)]="username" required> 
+            <br/>
+            <br/>
+            <label>Password : </label>   
+            <input type="password" placeholder="Enter Password" name="password" [(ngModel)]="password" required>
+            <br/>
+            <br/>  
+            <button type="submit">Login</button>      
+        </div>   
+    </form>     
+</body> 

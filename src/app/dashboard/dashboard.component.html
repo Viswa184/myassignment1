@@ -1,0 +1,19 @@
+<!-- <h2>Dashboard</h2>
+<p *ngFor='let i of a'>{{i}}</p> -->
+<form style="margin: auto; width: 220px;"> 
+<div class="container">
+    <h2>User Details</h2>
+    <table class="table table-sm table-bordered m-t-2">
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Sap Id</th>
+      </tr>
+      <tr *ngFor="let user of users">
+        <td>{{user.name}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.sapid}}</td>
+      </tr>
+    </table>
+  </div>
+</form>

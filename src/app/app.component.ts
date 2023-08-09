@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router,Route } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'myassignment1';
+  title = 'Home Page';
+
+  constructor(private router:Router){
+
+  }
+  dashboardClick(){
+    this.router.navigate(['Dashboard']);
+  }
+
+  loginClick(){
+    this.router.navigate(['Login']);
+  }
+  registrationClick(){
+    this.router.navigate(['Registration']);
+  }
 }

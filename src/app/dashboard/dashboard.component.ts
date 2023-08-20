@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MyappService } from '../myapp.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,10 +8,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
-  users = [
-    { name: 'Kolli Mahanth', age: 35, sapid:12345},
-    { name: 'Jyothi Swaroop', age: 12, sapid:134435 },
-    { name: 'Subhash Krishna', age: 22, sapid:137445 },
-    { name: 'Akula lokesh', age: 22, sapid:13735 }
-  ];
+  
+  jsonData:any[]=[];
+  
+    
+    constructor(private serviceobj:MyappService,private router:Router){
+
+    }
+    ngOnInit(): void {
+      this.serviceobj.getData().subscribe((data) => {
+        this.jsonData = data;
+      });
+    }
+
 }

@@ -1,19 +1,23 @@
-<!-- <h2>Dashboard</h2>
-<p *ngFor='let i of a'>{{i}}</p> -->
-<form style="margin: auto; width: 220px;"> 
-<div class="container">
-    <h2>User Details</h2>
-    <table class="table table-sm table-bordered m-t-2">
-      <tr>
-        <th>Name</th>
-        <th>Age</th>
-        <th>Sap Id</th>
-      </tr>
-      <tr *ngFor="let user of users">
-        <td>{{user.name}}</td>
-        <td>{{user.age}}</td>
-        <td>{{user.sapid}}</td>
-      </tr>
-    </table>
-  </div>
-</form>
+<form style="margin: auto; width: 1000px;"> 
+  <div class="container">
+      <h2>Product Details</h2>
+      <table class="table table-sm table-bordered m-t-2">
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Image</th>
+          <th>Price</th>
+        
+        </tr>
+        <tr *ngFor="let user of jsonData">
+          <td>{{user.id}}</td>
+          <td>{{user.item_name}}</td>
+          <td><img src={{user.item_img}} alt="Image" height="100px" widht="100px" ></td>
+          <td>{{user.item_price}}</td>
+        
+        </tr>
+      </table>
+    </div>
+
+  </form>
+ 

@@ -1,22 +1,11 @@
-<!-- <form style="margin: auto; width: 220px;">
-
-<h1>{{title}}</h1>
-<br/>
-<button (click)="loginClick()">Login</button>
-<button class="b2" (click)="dashboardClick()">Dashboard</button>
-<button class="b2" (click)="registrationClick()">Register</button>
-<br>
-</form> -->
-<nav class="navbar navbar-light bg-primary">
-    <div class="container fluid">
-        <img width="90" height="90" alt="Angular Logo"
-            src="https://cdn.vectorstock.com/i/1000x1000/47/23/cooking-and-chef-logo-vector-30824723.webp" />
-        <h2>Restuarant</h2>
-        <div class="d-flex">
-            <button routerLink="/Login" class="btn btn-danger mx-3"><b>Login</b></button> 
-            `
-        </div>
-    </div>
-  </nav>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <!-- <span>HOME</span> -->
+       <span><a href="/">HOME</a></span>
+       <span class="spacer"></span>
+       <a mat-button routerLink="/Dashboard">Products</a>
+       <a mat-button routerLink="/Login">Login</a>
+    </mat-toolbar-row>
+  </mat-toolbar>
   
 <router-outlet></router-outlet>
